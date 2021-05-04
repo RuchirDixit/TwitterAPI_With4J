@@ -23,6 +23,7 @@ object GetTweetsStream extends LazyLogging{
       val result = QueryBuilder.searchQuery(keywordsToQuery,twitterFactory)
       var count = 0
       while(result.hasNext){
+        println(result)
         count = count + 1
         tweets :+ result.getTweets
         if(count > 100) {
