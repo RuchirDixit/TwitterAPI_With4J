@@ -1,7 +1,7 @@
 package com.bridgelabz.twitterusing4j.main
 
 import com.bridgelabz.twitterusing4j.configuration.TwitterConfigurationSetup
-import com.bridgelabz.twitterusing4j.printtweets.{GetRetweetsCount, GetTweetsStream}
+import com.bridgelabz.twitterusing4j.printtweets.{GetFavoritesTweets, GetRetweetsCount, GetTweetsStream}
 
 object TwitterStreamMain {
   // getting config details from ev variables
@@ -18,6 +18,7 @@ object TwitterStreamMain {
       accessTokenSecret
     )
     //GetTweetsStream.getTweetsBasedOnKeywords(configurationBuilder,"President lang:en")
-    GetRetweetsCount.getCountOfRetweets(configurationBuilder,"India")
+    //GetRetweetsCount.getCountOfRetweets(configurationBuilder,"India")
+    GetFavoritesTweets.getFavoritesTweets(configurationBuilder)
   }
 }
