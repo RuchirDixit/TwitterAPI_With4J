@@ -11,3 +11,4 @@ libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3" % Runtime
 libraryDependencies += "org.twitter4j" % "twitter4j-stream" % "4.0.7"
 libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "2.7.0"
 libraryDependencies += "com.typesafe.play" %% "play-json" % "2.8.0"
+libraryDependencies += "org.apache.kafka" %% "kafka" % "2.4.1"

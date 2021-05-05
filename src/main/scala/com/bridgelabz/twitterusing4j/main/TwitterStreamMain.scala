@@ -1,6 +1,7 @@
 package com.bridgelabz.twitterusing4j.main
 
 import com.bridgelabz.twitterusing4j.configuration.TwitterConfigurationSetup
+import com.bridgelabz.twitterusing4j.database.MongoDatabase
 import com.bridgelabz.twitterusing4j.printtweets.{GetFavoritesTweets, GetRetweetsCount, GetTweetsStream}
 
 object TwitterStreamMain {
@@ -17,8 +18,9 @@ object TwitterStreamMain {
       accessToken,
       accessTokenSecret
     )
-    //GetTweetsStream.getTweetsBasedOnKeywords(configurationBuilder,"President lang:en")
-    //GetRetweetsCount.getCountOfRetweets(configurationBuilder,"India")
-    GetFavoritesTweets.getFavoritesTweets(configurationBuilder)
+    MongoDatabase.setCollectionName("retweets")
+   // GetTweetsStream.getTweetsBasedOnKeywords(configurationBuilder,"President lang:en")
+    GetRetweetsCount.getCountOfRetweets(configurationBuilder,"India")
+    //GetFavoritesTweets.getFavoritesTweets(configurationBuilder)
   }
 }

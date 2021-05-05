@@ -39,7 +39,7 @@ object GetTweetsStream extends LazyLogging{
       println(twitterException.printStackTrace())
       throw new Exception("Failed to search tweets")
     case _  =>
-      MongoDatabase.save(tweets)
+     // MongoDatabase.save(tweets)
   }
   }
 }
